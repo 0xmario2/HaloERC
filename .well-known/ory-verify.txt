@@ -1,2 +1,2 @@
 
-ory-verify=orynth-2a2828b0a5424426b25981ca5f1d2f1f
+oryhttps://0xmario2.github.io/haloerc/.well-known/ory-verify.txt
