@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo – The Market is the Mechanism</title>
+  <meta name="description" content="Halo is a continuous conviction market built on Uniswap v4 Hooks. No oracles. No settlement. Pure capital conviction." />
+  
+  <!-- Optional: Orynth meta tag (kalau mau pakai cara meta tag) -->
+  <!-- <meta name="ory-verify" content="PASTE_KODE_DARI_ORYNTH_DI_SINI"> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 40px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #00f0ff, #7b61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #00f0ff, #7b61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #aaa;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+
+    .cta {
+      display: inline-flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #00f0ff, #7b61ff);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #333;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      border-color: #00f0ff;
+      color: #00f0ff;
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 0 100px;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: #00f0ff;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #00f0ff;
+    }
+
+    .card p {
+      color: #999;
+      font-size: 0.95rem;
+    }
+
+    /* Quote */
+    .quote {
+      text-align: center;
+      padding: 80px 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .quote p {
+      font-size: 1.8rem;
+      font-weight: 600;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      padding: 50px 0;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #00f0ff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+      .hero {
+        padding: 60px 0 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">HALO</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="https://x.com/haloerc" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Docs</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>The market is<br><span>the mechanism</span></h1>
+      <p>
+        Halo is a continuous conviction market built on Uniswap v4 Hooks.<br>
+        No oracles. No settlement date. Just pure capital conviction.
+      </p>
+      <div class="cta">
+        <a href="#" class="btn btn-primary">Launch App</a>
+        <a href="https://x.com/haloerc" target="_blank" class="btn btn-secondary">Follow on X</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Why Halo is different</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>No Oracles</h3>
+          <p>The market itself decides. No external price feeds or trusted third parties needed.</p>
+        </div>
+        <div class="card">
+          <h3>No Settlement</h3>
+          <p>Positions never expire. Exit whenever you want. True continuous conviction.</p>
+        </div>
+        <div class="card">
+          <h3>Uniswap v4 Hooks</h3>
+          <p>Dynamic fees automatically adjust based on real-time conviction strength.</p>
+        </div>
+        <div class="card">
+          <h3>Self-Correcting</h3>
+          <p>Capital naturally flows to the stronger side through adaptive fee mechanics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p>“Two pools. One hook. Pure conviction.”</p>
+    </section>
+
+    <footer>
+      <p>Built on Ethereum • Powered by Uniswap v4</p>
+      <p style="margin-top: 8px;">
+        <a href="https://x.com/haloerc" target="_blank">@haloerc</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
